@@ -5,7 +5,7 @@ import static com.xiaoxiya.sorts.SortUtils.*;
 /**
  * @author xiaoxiya
  * @date 2019/12/4 21:28
- * @describe  冒泡排序算法实现
+ * @describe  冒泡排序算法java实现
  */
 public class BubbleSort implements SortAlgorithm {
     @Override
@@ -23,4 +23,16 @@ public class BubbleSort implements SortAlgorithm {
         }
         return array;
     }
+    public static void main(String[] args) {
+        Integer array[] = {1,2,6,5,8,4};
+        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort.sort(array);
+
+        print(array);
+
+        String[] strings = {"c", "a", "e", "b", "d"};
+
+        print(bubbleSort.sort(strings));
+    }
+
 }
