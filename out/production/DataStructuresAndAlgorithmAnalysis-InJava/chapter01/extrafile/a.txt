@@ -1,0 +1,6 @@
+#include b.txt
+#include c.txt
+#include d.txt
+
+AAAAAAAAAAAAAA
+测试中文字符

@@ -1,0 +1,4 @@
+#include b.txt
+#include c.txt
+
+ddd DDD dd
