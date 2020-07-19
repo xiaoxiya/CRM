@@ -28,16 +28,4 @@ public class Power {
         }
     }
 
-    public static String longestPalindrome(String s) {
-        if (s.length() <= 1)
-            return s;
-
-        return s;
-    }
-
-    public static void main(String[] args) {
-        // -2147483648～2147483647
-        System.out.println(myPow(1.00000,-2147483648));
-        System.out.println(Math.pow(1.00000,-2147483648));
-    }
 }

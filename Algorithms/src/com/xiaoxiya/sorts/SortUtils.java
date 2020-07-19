@@ -10,6 +10,14 @@ import java.util.List;
  */
 public class SortUtils {
 
+    /**
+     * 交换位置
+     * @param array
+     * @param x
+     * @param y
+     * @param <T>
+     * @return
+     */
     static <T> boolean swap(T[] array, int x, int y) {
         T swap = array[x];
         array[x] = array[y];
@@ -17,10 +25,21 @@ public class SortUtils {
         return true;
     }
 
+    /**
+     * 比较大小 v < w 返回true
+     * @param v
+     * @param w
+     * @param <T>
+     * @return
+     */
     static <T extends Comparable<T>> boolean less(T v, T w) {
         return v.compareTo(w) < 0;
     }
 
+    /**
+     * 打印
+     * @param toPrint
+     */
     static void print(List<?> toPrint) {
         toPrint.stream()
                 .map(Object::toString)
@@ -31,12 +50,6 @@ public class SortUtils {
 
     static void print(Object[] toPrint) {
         System.out.println(Arrays.toString(toPrint));
-    }
-
-    static <T extends Comparable<T>> void flip(T[] array, int left, int right) {
-        while (left <= right) {
-            swap(array, left++, right--);
-        }
     }
 
 }

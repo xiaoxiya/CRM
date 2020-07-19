@@ -5,7 +5,7 @@ import static com.xiaoxiya.sorts.SortUtils.*;
 /**
  * @author xiaoxiya
  * @date 2019/12/4 21:28
- * @describe  冒泡排序算法java实现
+ * @describe  冒泡排序算法java实现（O（n^2））
  */
 public class BubbleSort implements SortAlgorithm {
     @Override

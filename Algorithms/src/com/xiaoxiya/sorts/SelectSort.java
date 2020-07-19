@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author xiaoxiya
  * @date 2019/12/10 20:24
- * @describe 选择排序算法
+ * @describe 选择排序算法（O（n^2））
  */
 public class SelectSort implements SortAlgorithm{
 
