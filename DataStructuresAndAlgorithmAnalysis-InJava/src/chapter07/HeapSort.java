@@ -33,14 +33,18 @@ public class HeapSort {
         for (tmp = a[i]; leftChild(i) < n; i = child) {
             child = leftChild(i);
             if (child != n-1 && a[child].compareTo(a[child + 1]) < 0) {
+                //比较左右儿子大大小，child-左，child+1-右
+                //child指向左右儿子节点较大的
                 child++;
             }
             if (tmp.compareTo(a[child]) < 0) {
+                //将左右儿子较大的移动到i（父节点）的位置
                 a[i] = a[child];
             } else {
                 break;
             }
         }
+        //跳出循环，temp放入i（父节点的位置）
         a[i] = tmp;
     }
 

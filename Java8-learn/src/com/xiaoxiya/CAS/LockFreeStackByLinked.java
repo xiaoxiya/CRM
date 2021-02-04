@@ -1,8 +1,6 @@
 package com.xiaoxiya.CAS;
 
-import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicStampedReference;
 
 /**
  * @author xiaoxiya
@@ -10,8 +8,6 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  * @describe
  */
 public class LockFreeStackByLinked<E> implements LockFreeStack<E>{
-
-
 
     class ListNode<E> {
         public E item;
@@ -31,7 +27,6 @@ public class LockFreeStackByLinked<E> implements LockFreeStack<E>{
     @Override
     public boolean push(E e) {
         ListNode<E> node = new ListNode<E>(e);
-
         while (true) {
             //当前栈顶节点
             ListNode<E> currentTop = top.get();
@@ -41,7 +36,6 @@ public class LockFreeStackByLinked<E> implements LockFreeStack<E>{
             if (top.compareAndSet(currentTop, node)) {
                 return true;
             }
-
         }
     }
 
@@ -61,6 +55,5 @@ public class LockFreeStackByLinked<E> implements LockFreeStack<E>{
             }
         }
     }
-
 
 }
